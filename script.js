@@ -91,6 +91,16 @@ function randomNumericalValue() {
   return generateRandomNumericalValue;
 }
 
+function randomSpecialCharacter() {
+  const specialCharacters = "@|!#$%&/()=?»«@£§€{}.-;<>_,";
+  const specialCharactersArray = specialCharacters.split("");
+  const generateRandomSpecialCharacter =
+    specialCharactersArray[
+      Math.floor(Math.random() * specialCharactersArray.length)
+    ];
+  return generateRandomSpecialCharacter;
+}
+
 // console.log(
 //   randomNumericalValue(),
 //   randomSpecialCharacter(),
