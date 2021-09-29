@@ -83,6 +83,14 @@ function randomUppercaseCharacter() {
   return generateRandomUpperCC;
 }
 
+function randomNumericalValue() {
+  const numericalValue = "0123456789";
+  const numericalArray = numericalValue.split("");
+  const generateRandomNumericalValue =
+    numericalArray[Math.floor(Math.random() * numericalArray.length)];
+  return generateRandomNumericalValue;
+}
+
 // console.log(
 //   randomNumericalValue(),
 //   randomSpecialCharacter(),
