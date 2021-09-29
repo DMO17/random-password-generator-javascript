@@ -4,7 +4,7 @@
 
 const userPasswordLength = function () {
   const characterLength = prompt(
-    "Enter the character length the of the password"
+    "Enter the character length the of your password"
   );
 
   //                       STEP 2 :
@@ -17,7 +17,7 @@ const userPasswordLength = function () {
     const inputNumValue = Number(characterLength); // the input string is converted to a number
     if (inputNumValue < 8 || inputNumValue > 125) {
       alert(
-        `Password length is not valid. Pick a length between 8 and 125 and press cancel`
+        "Password length is not valid. Pick a length between 8 and 125 and press cancel"
       );
       return;
     } else {
@@ -67,21 +67,32 @@ function specialCharacterOption() {
 //  declare a list of lowercase , uppercase , numbers and special characters in a string
 // convert the string into an array
 
+function randomLoweCaseCharacter() {
+  const lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+  const lowerCaseArray = lowerCaseCharacters.split("");
+  const generateRandomLowerCC =
+    lowerCaseArray[Math.floor(Math.random() * lowerCaseArray.length)];
+  return generateRandomLowerCC;
+}
+
+// console.log(
+//   randomNumericalValue(),
+//   randomSpecialCharacter(),
+//   randomUppercaseCharacter(),
+//   randomLoweCaseCharacter()
+// );
+
 //                       STEP 8  :
-const passwordLength = userPasswordLength();
+// store the above functions in a variable
 
-const inputLowerCase = lowerCaseOption();
+// const passwordLength = userPasswordLength();
 
-const inputUpperCase = upperCaseOption();
+// const inputLowerCase = lowerCaseOption();
 
-const inputNumericValue = numericOption();
+// const inputUpperCase = upperCaseOption();
 
-const inputSpecialCharacter = specialCharacterOption();
+// const inputNumericValue = numericOption();
 
-console.log(
-  passwordLength,
-  inputLowerCase,
-  inputUpperCase,
-  inputNumericValue,
-  inputSpecialCharacter
-);
+// const inputSpecialCharacter = specialCharacterOption();
+
+//                       STEP 9  :
