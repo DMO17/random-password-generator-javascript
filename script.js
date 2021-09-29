@@ -64,10 +64,10 @@ function specialCharacterOption() {
 }
 
 //                       STEP 7 :
-//  declare a list of lowercase , uppercase , numbers and special characters in a string
-// convert the string into an array
+//  in a function declare a list of lowercase , uppercase , numbers and special characters in a string
+// convert the string into an array and then generate a random
 
-function randomLoweCaseCharacter() {
+function randomLowerCaseCharacter() {
   const lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
   const lowerCaseArray = lowerCaseCharacters.split("");
   const generateRandomLowerCC =
@@ -101,24 +101,43 @@ function randomSpecialCharacter() {
   return generateRandomSpecialCharacter;
 }
 
-// console.log(
-//   randomNumericalValue(),
-//   randomSpecialCharacter(),
-//   randomUppercaseCharacter(),
-//   randomLoweCaseCharacter()
-// );
-
 //                       STEP 8  :
 // store the above functions in a variable
 
-// const passwordLength = userPasswordLength();
+const passwordLength = userPasswordLength();
 
-// const inputLowerCase = lowerCaseOption();
+const inputLowerCase = lowerCaseOption();
 
-// const inputUpperCase = upperCaseOption();
+const inputUpperCase = upperCaseOption();
 
-// const inputNumericValue = numericOption();
+const inputNumericValue = numericOption();
 
-// const inputSpecialCharacter = specialCharacterOption();
+const inputSpecialCharacter = specialCharacterOption();
 
 //                       STEP 9  :
+
+function generatingUserPassword() {
+  let randomGeneratedPassword = [];
+
+  while (passwordLength > randomGeneratedPassword.length) {
+    if (inputLowerCase === true) {
+      randomGeneratedPassword.push(randomLowerCaseCharacter());
+    }
+
+    if (inputUpperCase === true) {
+      randomGeneratedPassword.push(randomUppercaseCharacter());
+    }
+
+    if (inputNumericValue === true) {
+      randomGeneratedPassword.push(randomNumericalValue());
+    }
+
+    if (inputSpecialCharacter === true) {
+      randomGeneratedPassword.push(randomSpecialCharacter());
+    }
+  }
+
+  console.log(randomGeneratedPassword);
+}
+
+generatingUserPassword();
