@@ -6,6 +6,7 @@ function userPasswordLength() {
     `Enter the character length the of the password `,
     `Enter Here`
   );
+  return Number(characterLength); // the input string is converted to a number
 }
 
 //                       STEP 2 :
