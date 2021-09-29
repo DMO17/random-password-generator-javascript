@@ -1,6 +1,12 @@
 //                       STEP 1 :
 // prompt bar asking the user to input a character length
 // Also convert that number string in to a number type data
+function userPasswordLength() {
+  const characterLength = prompt(
+    `Enter the character length the of the password `,
+    `Enter Here`
+  );
+}
 
 //                       STEP 2 :
 // function that validates the user input matches the password length criterial
