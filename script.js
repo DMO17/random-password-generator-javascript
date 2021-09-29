@@ -75,6 +75,14 @@ function randomLoweCaseCharacter() {
   return generateRandomLowerCC;
 }
 
+function randomUppercaseCharacter() {
+  const upperCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+  const upperCaseArray = upperCaseCharacters.toUpperCase().split("");
+  const generateRandomUpperCC =
+    upperCaseArray[Math.floor(Math.random() * upperCaseArray.length)];
+  return generateRandomUpperCC;
+}
+
 // console.log(
 //   randomNumericalValue(),
 //   randomSpecialCharacter(),
