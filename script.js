@@ -135,9 +135,19 @@ function generatingUserPassword() {
     if (inputSpecialCharacter === true) {
       randomGeneratedPassword.push(randomSpecialCharacter());
     }
+
+    while (randomGeneratedPassword.length - passwordLength > 0) {
+      randomGeneratedPassword.pop();
+    }
   }
 
   console.log(randomGeneratedPassword);
 }
 
 generatingUserPassword();
+
+// 4 different characyer array in global memory
+
+// create a list of the combined array outside for loop
+
+// for loop : create a list of all the all the charater types
