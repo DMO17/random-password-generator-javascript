@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // PLEASE ADD ALL YOUR CODE HERE
+
   //                       STEP 1 :
   // prompt bar asking the user to input a character length
   // Also convert that number string in to a number type data
@@ -167,6 +168,7 @@ function generatePassword() {
 
     return randomGeneratedPassword;
   }
+  return generatingUserPassword();
 }
 
 // Write password to the #password input
