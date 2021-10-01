@@ -146,11 +146,15 @@ function generatingUserPassword() {
       );
       break;
     }
-
-    while (randomGeneratedPassword.length - passwordLength > 0) {
-      randomGeneratedPassword.pop();
-    }
   }
+
+  while (randomGeneratedPassword.length - passwordLength > 0) {
+    randomGeneratedPassword.pop();
+  }
+
+  randomGeneratedPassword = randomGeneratedPassword.sort(
+    () => Math.random() - 0.5
+  );
 
   console.log(randomGeneratedPassword);
 }
