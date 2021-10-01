@@ -136,10 +136,10 @@ function generatingUserPassword() {
       randomGeneratedPassword.push(randomSpecialCharacter());
     }
     if (
-      (inputLowerCase &&
-        inputUpperCase &&
-        inputNumericValue &&
-        inputSpecialCharacter) === false
+      inputLowerCase === false &&
+      inputUpperCase === false &&
+      inputNumericValue === false &&
+      inputSpecialCharacter === false
     ) {
       alert(
         "Please pick one of the choice 1 type of character format for your password"
