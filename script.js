@@ -156,6 +156,8 @@ function generatingUserPassword() {
     () => Math.random() - 0.5
   );
 
+  randomGeneratedPassword = randomGeneratedPassword.join("");
+
   console.log(randomGeneratedPassword);
 }
 
