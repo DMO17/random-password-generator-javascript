@@ -9,6 +9,8 @@ function generatePassword() {
   // Also convert that number string in to a number type data
 
   const userPasswordLength = function () {
+    // declare an is valid booleon
+
     const characterLength = prompt(
       "Enter the character length the of your password"
     );
@@ -21,9 +23,9 @@ function generatePassword() {
       return;
     } else {
       const inputNumValue = Number(characterLength); // the input string is converted to a number
-      if (inputNumValue < 8 || inputNumValue > 125) {
+      if (inputNumValue < 8 || inputNumValue > 128) {
         alert(
-          "Password length is not valid. Pick a length between 8 and 125 and press cancel"
+          "Password length is not valid. Pick a length between 8 and 128 and press cancel"
         );
         return;
       } else {
@@ -128,21 +130,6 @@ function generatePassword() {
     let randomGeneratedPassword = [];
 
     while (passwordLength > randomGeneratedPassword.length) {
-      if (inputLowerCase === true) {
-        randomGeneratedPassword.push(randomLowerCaseCharacter());
-      }
-
-      if (inputUpperCase === true) {
-        randomGeneratedPassword.push(randomUppercaseCharacter());
-      }
-
-      if (inputNumericValue === true) {
-        randomGeneratedPassword.push(randomNumericalValue());
-      }
-
-      if (inputSpecialCharacter === true) {
-        randomGeneratedPassword.push(randomSpecialCharacter());
-      }
       if (
         inputLowerCase === false &&
         inputUpperCase === false &&
@@ -153,6 +140,21 @@ function generatePassword() {
           "Please pick one of the choice 1 type of character format for your password"
         );
         break;
+      }
+      if (inputLowerCase) {
+        randomGeneratedPassword.push(randomLowerCaseCharacter());
+      }
+
+      if (inputUpperCase) {
+        randomGeneratedPassword.push(randomUppercaseCharacter());
+      }
+
+      if (inputNumericValue) {
+        randomGeneratedPassword.push(randomNumericalValue());
+      }
+
+      if (inputSpecialCharacter) {
+        randomGeneratedPassword.push(randomSpecialCharacter());
       }
     }
 
@@ -178,6 +180,3 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
